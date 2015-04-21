@@ -1,8 +1,8 @@
 AutomatedMakefile = am
 CC = g++
 
-FILES = HeapDriver.o
-EXECUTABLE = Driver.exe
+FILES = DrawHeapSkew.o
+EXECUTABLE = Draw.exe
 
 PROJECT_PATH = $(PROJECT_DIR)
 GTK_PATH = /$(DRIVE_LETTER)/MinGW/GTK
@@ -21,7 +21,7 @@ all: Project
 Project: 		$(FILES)
 			$(LINK) $(EXECUTABLE) $(FILES) $(LIBS)
 
-HeapDriver.o:		HeapDriver.cpp BinaryTree.h BinaryTreeIterator.h TreeNode.h HeapSkew.h
-					$(COMPILE) HeapDriver.cpp
+DrawHeapSkew.o:		DrawHeapSkew.cpp BinaryTree.h BinaryTreeIterator.h TreeNode.h HeapSkew.h
+					$(COMPILE) DrawHeapSkew.cpp
 
 
