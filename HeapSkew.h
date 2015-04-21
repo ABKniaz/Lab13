@@ -53,7 +53,24 @@ template < class T >
 BinaryTree<T>* HeapSkew<T>::merge(BinaryTree<T>* left, BinaryTree<T>* right)
 {
    //DO THIS
-
+	if (left->isEmpty())
+	{
+		return right;
+	}
+	
+	if (right->isEmpty())
+	{
+		return left;
+	}
+	
+	int comparison = (*compare_items) (left->getRootItem(), right->getRootItem());
+	
+	if (comparison < 0)
+	{
+		return merge(right, left);
+	}
+	
+	
 
 
 
